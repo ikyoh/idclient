@@ -1,0 +1,29 @@
+{
+    # email to generate a valid SSL certificate
+    email ohsito@gmail.com
+
+    # HTTP/3 support
+    # servers {
+    #     protocol {
+    #         experimental_http3
+    #     }
+    # }
+}
+
+# Host which Caddy will handle
+{$DOMAIN_NAME} {
+
+    root * /var/www/html
+    php_fastcgi wordpress:9000
+    file_server
+    encode gzip zstd
+
+}
+
+
+
+
+
+
+
+
